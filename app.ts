@@ -32,31 +32,59 @@
 
 //union(|) and intersection(&) types
 //class - factory of objects
-class Device {
-    name = "lg";
-    price = 1200;
-    category = "electronics";
-}
-let d1 = new Device();
-let d2 = new Device();
+// class Device {
+//     name = "lg";
+//     price = 1200;
+//     category = "electronics";
+// }
+// let d1 = new Device();
+// let d2 = new Device();
 
-//constructor - maker
-// define public is also imp
-class HumanMaker{
-    age=0;
-    constructor(public name: string, public isHandsome: boolean){
+// //constructor - maker
+// // define public is also imp
+// class HumanMaker{
+//     age=0;
+//     constructor(public name: string, public isHandsome: boolean){
 
+//     }
+// }
+// let b1 = new HumanMaker('govind', true)
+// let b2 = new HumanMaker('harsh', false)
+
+// // this keyword in objects & class
+// //this - if we access class's variable in any kind of function under class then you have to use this 
+// class bottleMaker {
+//     constructor(public name: string) {
+//         this.name = name;
+//     }
+// }
+
+// let b3 = new bottleMaker('coca cola');
+
+// public , protected , private
+
+// class bottleMaker {
+//     constructor(private name: string) {}
+// }
+// let b1 = new bottleMaker('milton');
+// b1.name = "hululu"; // This will cause an error since name is private
+// protected only use when class inherted by another class like using extend keword
+
+//getter and setter
+class user {
+    constructor(public _name: string, public _age: number) {}
+
+    get name() { //getter
+        return this._name;
+    }
+
+    get age() {
+        return this._name;
+    }
+
+    set name(value: string) { //setter
+        this._name = value;
     }
 }
-let b1 = new HumanMaker('govind', true)
-let b2 = new HumanMaker('harsh', false)
 
-// this keyword in objects & class
-//this - if we access class's variable in any kind of function under class then you have to use this 
-class bottleMaker {
-    constructor(public name: string) {
-        this.name = name;
-    }
-}
-
-let b3 = new bottleMaker('coca cola');
+let u1 = new user('govind', 23);
